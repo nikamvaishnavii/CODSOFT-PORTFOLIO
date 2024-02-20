@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div id="header">
+    
+    <div class="container">
+        <nav>
+            <h1 class="logo">vaishnavi</h1>
+            <ul id="sidemenu">
+                
+                    <li><a href="#header">Home</a></li>
+                   <li> <a href="#about">About</a></li> 
+                    <li><a href="#portfolio">portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    
+               </ul>
+            <i class='bx bx-menu' onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hi,I'm <span>vaishnavi</span><br> An Ethusiastic Engineer</h1>
+        </div>
+    </div>
+
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col1">
+                <img src="image.jpeg" alt="">
+            </div>
+            <div class="col2">
+                <h1 class="sub-title">ABOUT ME</h1>
+                <p>
+                    I'm Vaishnavi Nikam. Studying in Sanjivani College Of Engineering in SY Electronics and 
+                    Computer Department. I am Ethusiastic and Passionated Web Developer.learning is always my
+                    passion. </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')"> Skills</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>web developer</span><br>Designing web designs </li>
+                            <li><span>c programering</span><br>expert in c programming</li>
+                            <li><span>ui/ux designer</span><br> designing the interfaces of web/app</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>ssc</span><br> Dr.C.M.Mehta kanya vidyalay kopargaon<br>94.80% <br>2020</li>
+                            <li><span>hsc</span><br>SSGM College kopargaon<br>74%<br>2022</li>
+                            <li><span>B.tech</span><br>Sanjivani college of Engineering,kopargaon<br>pursuing </li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+   <!---portfolio-->
+   <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">MY CERTIFICATES</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="coursera 1.jpeg">
+                <div class="layer">
+                   <h3>my coursera 1</h3>
+                    <a href="#"><i class='bx bx-link-external' ></i></a>
+                </div>
+                </div>
+            <div class="work">
+                <img src="coursera2.jpeg">
+                <div class="layer">
+                <h3>my coursera 2</h3>
+                <a href="#"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="coursera 3.jpeg" alt="">
+                <div class="layer">
+                    <h3>my coursera 3</h3>
+                    <a href="#"><i class='bx bx-link-external' ></i></a> 
+                </div>
+            </div>
+        </div>
+        <a href="*" class="btn">See More</a>
+    </div>
+   </div>
+   <!----contact---->
+   <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p ><i class='bx bxs-envelope'></i>nvaishnavi1110@.com</p>
+                <div class="social-icons">
+                  <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                  <a href="#"><i class='bx bxl-github'></i></a>
+                  <a href="#"><i class='bx bxl-instagram'></i></a>
+
+                </div>
+                <a href="" class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+            <form >
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your email"  required>
+                <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+             </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright by vaishnavi</p>
+    </div>
+   </div>
+   
+    <script>
+
+var tablinks = document.getElementsByClassName( " tab-links");
+var tabcontents = document.getElementsByClassName( " tab-contents");
+function opentab( tabname){
+    for( tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for( tabcontent of tabcontents){
+    tabcontent.classList.remove("active-tab");
+}
+event.currentTarget.classList.add("active-link");
+document.getElementById(tabname).classList.add("active-tab");
+}
+
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+    </script>
+</body>
+</html>
